@@ -19,25 +19,18 @@ requirements:
     - libtool
     - perl  # Needed to run the tests
     - {{ compiler('c') }}
+    - make  # [unix]
+    - automake
   host:
     - zlib
     - bzip2
-    - pcre 8.39*
+    - pcre
     - krb5
     - openssl
     - libxml2
     - sqlite
     - libuuid
-    - mysql
-  run:
-    - zlib
-    - bzip2
-    - pcre 8.39*
-    - krb5
-    - openssl
-    - libxml2
-    - sqlite
-    - libuuid
+    - mysql-connector-c
 
 test:
   files:

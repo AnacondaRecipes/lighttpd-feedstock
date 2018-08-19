@@ -1,11 +1,17 @@
 #!/bin/bash
+autoreconf -vfi
 
-./configure \
+ac_cv_prog_CC_FOR_BUILD=$CC \
+    ./configure \
     --with-sysroot=$PREFIX \
     --prefix=$PREFIX \
+    --sbindir=$PREFIX/bin \
+    --build=$BUILD \
+    --host=$HOST \
     --with-webdav-props \
 		--with-webdav-locks \
-    --with-krb5 \
+    --with-krb5=$PREFIX \
+    --with-uuid=$PREFIX \
     --with-mysql \
     --with-openssl
 #
@@ -19,7 +25,7 @@
 # even if we do build with support for it).
 #
 
-make -j${CPU_COUNT}
+make -j${CPU_COUNT} VERBOSE=1
 
 # See:
 #  https://redmine.lighttpd.net/projects/lighttpd/wiki/RunningUnitTests
@@ -27,6 +33,3 @@ make -j${CPU_COUNT}
 make -j${CPU_COUNT} check VERBOSE=1
 
 make install
-
-rm -rf $PREFIX/bin
-mv $PREFIX/sbin $PREFIX/bin

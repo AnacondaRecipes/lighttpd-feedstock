@@ -1,5 +1,5 @@
 {% set major_minor = "1.4" %}
-{% set version = major_minor + ".50" %}
+{% set version = major_minor + ".51" %}
 
 package:
   name: lighttpd
@@ -7,7 +7,7 @@ package:
 
 source:
   url: http://download.lighttpd.net/lighttpd/releases-{{ major_minor }}.x/lighttpd-{{ version }}.tar.gz
-  sha256: c9a9f175aca6db22ebebbc47de52c54a99bbd1dce8d61bb75103609a3d798235
+  sha256: 4301fe64136c7030d63cccc96996c6603dcbe82cca9a72e0aca29ce88284c978
 
 build:
   number: 0

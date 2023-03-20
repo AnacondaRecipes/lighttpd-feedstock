@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: http://download.lighttpd.net/lighttpd/releases-{{ major_minor }}.x/lighttpd-{{ version }}.tar.gz
+  url: https://download.lighttpd.net/lighttpd/releases-{{ major_minor }}.x/lighttpd-{{ version }}.tar.gz
   sha256: 4301fe64136c7030d63cccc96996c6603dcbe82cca9a72e0aca29ce88284c978
 
 build:

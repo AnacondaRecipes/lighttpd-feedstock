@@ -11,6 +11,8 @@ source:
 
 build:
   number: 1
+  # mysql-connector-c is not available on s390x
+  skip: True  # [linux and s390x]
   skip: True  # [not linux]
 
 requirements:
@@ -27,7 +29,7 @@ requirements:
     - libuuid
     - libxml2 2.10
     - mysql-connector-c
-    - openssl
+    - openssl 1.1.1
     - pcre
     - sqlite
     - zlib

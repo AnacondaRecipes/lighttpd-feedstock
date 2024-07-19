@@ -10,7 +10,7 @@ source:
   sha256: 4301fe64136c7030d63cccc96996c6603dcbe82cca9a72e0aca29ce88284c978
 
 build:
-  number: 1
+  number: 2
   # mysql-connector-c is not available on s390x
   skip: True  # [linux and s390x]
   skip: True  # [not linux]
@@ -27,7 +27,7 @@ requirements:
     - bzip2
     - krb5
     - libuuid
-    - libxml2 2.10
+    - libxml2 {{ libxml2 }}
     - mysql-connector-c
     - openssl 1.1.1
     - pcre

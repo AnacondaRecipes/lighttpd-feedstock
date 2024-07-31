@@ -29,7 +29,7 @@ requirements:
     - libuuid
     - libxml2 {{ libxml2 }}
     - mysql-connector-c
-    - openssl 1.1.1
+    - openssl {{ openssl }}
     - pcre
     - sqlite
     - zlib
